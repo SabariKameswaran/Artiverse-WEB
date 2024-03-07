@@ -18,23 +18,31 @@
     />
     <script>
       // Check if the user is on a mobile device
-      document.addEventListener("DOMContentLoaded", function() {
+      if(window.innerWidth <= 600) {
+            // Show mobile video source and hide desktop video source
+            document.getElementById('myVideo').src = document.getElementById('mobileVideo').src;
+        } else {
+            // Show desktop video source and hide mobile video source
+            document.getElementById('myVideo').src = document.getElementById('desktopVideo').src;
+        }
+
+        // Function to display the last frame of the video
+        function displayLastFrame() {
             var video = document.getElementById('myVideo');
+            var canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            var lastFrameImg = document.getElementById('lastFrame');
+            lastFrameImg.src = canvas.toDataURL();
+            lastFrameImg.style.display = 'block'; // Show the last frame
+            video.style.display = 'none'; // Hide the video
+        }
 
-            // Check if the user is on a mobile device
-            if(window.innerWidth <= 600) {
-                // Show mobile video source and hide desktop video source
-                video.src = document.getElementById('mobileVideo').src;
-            } else {
-                // Show desktop video source and hide mobile video source
-                video.src = document.getElementById('desktopVideo').src;
-            }
-
-            // Loop the last frame of the video after it ends
-            video.addEventListener('ended', function() {
-                video.currentTime = video.duration; // Seek to the last frame
-                video.pause(); // Play the video again from the last frame
-            });
+        // Event listener to detect when the video ends
+        document.getElementById('myVideo').addEventListener('ended', function() {
+            displayLastFrame();
         });
   </script>
   </head>
@@ -44,6 +52,7 @@
           <source id="desktopVideo" src="src/ARTIVERSE_HD.webm" type="video/webm">
           <source id="mobileVideo" src="src/Artiverse_HD_vertical.webm" type="video/webm">
       </video>
+      <img id="lastFrame" alt="Last Frame">
       
   </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
