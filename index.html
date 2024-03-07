@@ -19,14 +19,22 @@
     <script>
       // Check if the user is on a mobile device
       document.addEventListener("DOMContentLoaded", function() {
+            var video = document.getElementById('myVideo');
+
             // Check if the user is on a mobile device
             if(window.innerWidth <= 600) {
                 // Show mobile video source and hide desktop video source
-                document.getElementById('myVideo').src = document.getElementById('mobileVideo').src;
+                video.src = document.getElementById('mobileVideo').src;
             } else {
                 // Show desktop video source and hide mobile video source
-                document.getElementById('myVideo').src = document.getElementById('desktopVideo').src;
+                video.src = document.getElementById('desktopVideo').src;
             }
+
+            // Loop the last frame of the video after it ends
+            video.addEventListener('ended', function() {
+                video.currentTime = video.duration; // Seek to the last frame
+                video.play(); // Play the video again from the last frame
+            });
         });
   </script>
   </head>
