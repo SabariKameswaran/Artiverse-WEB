@@ -33,7 +33,7 @@
             // Loop the last frame of the video after it ends
             video.addEventListener('ended', function() {
                 video.currentTime = video.duration; // Seek to the last frame
-                video.play(); // Play the video again from the last frame
+                video.pause(); // Play the video again from the last frame
             });
         });
   </script>
