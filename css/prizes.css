@@ -49,7 +49,7 @@
   margin: 0 auto;
   width: 100px;
   height: 100px;
-  background: linear-gradient(90deg, #25050500 0%, #240323 40%, rgba(0, 0, 0, 0.28) 60%);
+  background: linear-gradient(90deg, #f8060600 0%, #360101 40%, rgba(163, 0, 0, 0.28) 60%);
   border-radius: 100%;
   display: flex;
   justify-content: center;

@@ -20,7 +20,7 @@ margin-bottom: 30px;
   width: 6px;
   margin: 0 auto;
   padding-top: 50px;
-  background: #6C246C;
+  background: #dc0c0c;
 }
 
 .timeline ul li::after {
@@ -41,7 +41,7 @@ margin-bottom: 30px;
   bottom: 0;
   width: 400px;
   padding: 15px;
-  background: #6C246C;
+  background: #dc0c0c;
 }
 
 .timeline ul li div::before {
@@ -60,7 +60,7 @@ margin-bottom: 30px;
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent #6C246C transparent transparent;
+  border-color: transparent #dc0c0c transparent transparent;
 }
 
 .timeline ul li:nth-child(even) div {
@@ -70,7 +70,7 @@ margin-bottom: 30px;
 .timeline ul li:nth-child(even) div::before {
   right: -15px;
   border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent #6C246C;
+  border-color: transparent transparent transparent #dc0c0c;
 }
 
 time {
@@ -90,7 +90,7 @@ time {
 }
 
 .timeline ul li.in-view::after {
-  background: #6C246C;
+  background: #dc0c0c;
 }
 
 .timeline ul li div {
@@ -153,7 +153,7 @@ time {
   .timeline ul li:nth-child(even) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent #6C246C transparent transparent;
+    border-color: transparent #dc0c0c transparent transparent;
   }
   time{
     font-size: 0.9rem;
