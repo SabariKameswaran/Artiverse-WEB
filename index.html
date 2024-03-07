@@ -18,13 +18,16 @@
     />
     <script>
       // Check if the user is on a mobile device
-      if(window.innerWidth <= 600) {
-          // Show mobile video source and hide desktop video source
-          document.getElementById('myVideo').src = document.getElementById('mobileVideo').src;
-      } else {
-          // Show desktop video source and hide mobile video source
-          document.getElementById('myVideo').src = document.getElementById('desktopVideo').src;
-      }
+      document.addEventListener("DOMContentLoaded", function() {
+            // Check if the user is on a mobile device
+            if(window.innerWidth <= 600) {
+                // Show mobile video source and hide desktop video source
+                document.getElementById('myVideo').src = document.getElementById('mobileVideo').src;
+            } else {
+                // Show desktop video source and hide mobile video source
+                document.getElementById('myVideo').src = document.getElementById('desktopVideo').src;
+            }
+        });
   </script>
   </head>
   <body>
