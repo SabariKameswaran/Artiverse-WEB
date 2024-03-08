@@ -22,17 +22,25 @@
             if(window.innerWidth <= 600) {
                 // Show mobile video source and hide desktop video source
                 document.getElementById('myVideo').src = document.getElementById('mobileVideo').src;
+                document.getElementById('myVideo').setAttribute('poster', 'src/ver_poster.png');
             } else {
                 // Show desktop video source and hide mobile video source
                 document.getElementById('myVideo').src = document.getElementById('desktopVideo').src;
+                document.getElementById('myVideo').setAttribute('poster', 'src/hor_poster.png');
             }
+            setTimeout(function() {
+            document.getElementById('myVideo').pause();
+        },12000);
+
         });
+        
+        
   </script>
   </head>
   <body>
     <div id="Video">
       <video id="myVideo" autoplay muted>
-          <source id="desktopVideo" src="src/ARTIVERSE_HD.webm" type="video/webm">
+          <source id="desktopVideo" src="src/Artiverse_HD_horizontal.webm" type="video/webm">
           <source id="mobileVideo" src="src/Artiverse_HD_vertical.webm" type="video/webm">
       </video>
       
@@ -130,14 +138,14 @@
         </div>
         <div class="about-content">
           <h2>Points To Remember:</h2>
- <p>✔️ Date: 22th March to 23th March 2024</p>
-          <p>✔️ ID Mandatory</p>
-          <p>✔️ AI tools not Allowed</p>
-          <p>✔️ System will be Provided</p>
-          <p>✔️ Free Registration</p>
-          <p>✔️ Accomodation will be Provided</p>
-          <p>✔️ Additional prizes awarded based on performance, excluding top 3.</p>
-           <p>✔️ Both Abstract and Problems are given. (Click Download)</p>``
+ <p>📅 Date: 22th March to 23th March 2024</p>
+          <p>🪪 ID Mandatory</p>
+          <p>🤖 AI tools not Allowed</p>
+          <p>🖥️ System will be Provided</p>
+          <p>🎉 Free Registration</p>
+          <p>🛏️ Accomodation will be Provided</p>
+          <p>🎁 Additional prizes awarded based on performance, excluding top 3.</p>
+           <p>📍 Both Abstract and Problems are given. (Click Download)</p>``
           <a href="path_to_your_file" download="your_file_name">
             <button type="button" class="button1">
               <span class="button__text">Download</span>
@@ -398,13 +406,13 @@
       <h1>Contact</h1>
       <div class="container">
         <div class="section">
-          <h2 style="color: purple">Staff Coordinator</h2>
+          <h2 style="color: rgb(244, 0, 0)">Staff Coordinator</h2>
 
           <h4><a href="tel:+918667811924">Vanitha M  8667811924</a></h4>
 
         </div>
         <div class="section">
-          <h2 style="color: purple">Student Coordinators</h2>
+          <h2 style="color: rgb(244, 0, 0)">Student Coordinators</h2>
           <h4><a href="tel:+919585064438">Vikram V  9585064438</a></h4>
 <h4><a href="tel:+917305044131">Logesh P  7305044131</a></h4>
 <h4><a href="tel:+919629546144">Sanjay R  9629546144</a></h4>
@@ -413,7 +421,7 @@
 
         </div>
         <div class="section">
-          <h1 style="color: purple; margin-bottom: 10px;">
+          <h1 style="color: rgb(244, 0, 0); margin-bottom: 10px;">
             &copy; 2024 ARTIVERSE
           </h1>
           <a href="mailto:" class="email-link">artiverse2k24.ad@gmail.com</a>
